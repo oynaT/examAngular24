@@ -1,2 +1,2 @@
 # examAngular24
-Agular exam 2024
+Angular exam 2024
