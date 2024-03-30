@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductsRoutingModule } from './products-routing.module';
 import { CreateComponent } from './create/create.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     CatalogComponent,
     CreateComponent,
+    DetailsComponent,
   ],
   imports: [
     CommonModule,

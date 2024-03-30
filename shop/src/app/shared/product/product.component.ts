@@ -7,5 +7,5 @@ import { IProduct } from 'src/app/core/interfaces/Product';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent {
-@Input() product!: IProduct
+  @Input() product!: IProduct
 }

@@ -23,4 +23,30 @@ export class ProductService {
     return this.http.post<IProduct>(url, productData);
   }
 
+  getProductById(productId: string): Observable<IProduct> {
+    const url = CONSTANTS.host + ENDPOINTS.details(productId);
+    return this.http.get<IProduct>(url);
+  }
+
+  deleteProductById(productId: string): Observable<unknown> {
+    const url = CONSTANTS.host + ENDPOINTS.delete(productId);
+    return this.http.delete<unknown>(url);
+  }
+
+  orderProductById(productId: string): Observable<unknown> {
+    const url = CONSTANTS.host + ENDPOINTS.orderProduct;
+    return this.http.post<unknown>(url, {productId});
+  }
+
+  canOrder(productId: string, userId: string): Observable<number> {
+    const url = CONSTANTS.host + ENDPOINTS.canOrder(productId, userId);
+    return this.http.get<number>(url);
+  }
+
+  ordersForProduct(productId: string): Observable<number> {
+    const url = CONSTANTS.host + ENDPOINTS.ordersForProduct(productId);
+    return this.http.get<number>(url);
+  }
+
+
 }

@@ -1,36 +1,7 @@
-<!-- <div class=" ">
-    <div class=" ">
-        <img class=" " src="{{ product.image }}" alt="{{ product.name }}"/>
-    </div>
-    <div class=" ">
-        <h5 class="">
-        Name: {{ product.name }}
-        </h5>
-        <p class="">
-        Price: {{ product.price }}
-        </p>
-        <p class="">
-            Price: {{ product.brand }}
-        </p>
-        <p class="">
-            Description: {{ product.description }}
-        </p>
-
-    
-    </div>
-</div> -->
-    <div class="added-item-in-shop">
-        <a href="#" >
-            <img src={{product.image}} class="picture-added-item" alt="{{ product.name }}">
-            <h3>{{product.name}}</h3>
-            <span>Price: {{product.price}} </span>
-            <!-- <p>Description: {{product.description}} </p> -->
-        </a>
-    </div>
-    
-        <!-- <a [routerLink]="['/products', 'details', produc._id]"
-        class="">
-        <span>More Info</span>
-        </a> -->
-
-
+<div class="added-item-in-shop">
+    <img src={{product.image}} class="picture-added-item" alt="{{ product.name }}">
+    <h3>{{product.name}}</h3>
+    <span>Price: {{product.price}} </span>
+    <p>Description: {{product.description}} </p>
+    <a [routerLink]="['/products', 'details', product._id]"><span>More Info</span></a>
+</div>
