@@ -5,10 +5,12 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductsRoutingModule } from './products-routing.module';
+import { CreateComponent } from './create/create.component';
 
 @NgModule({
   declarations: [
-    CatalogComponent
+    CatalogComponent,
+    CreateComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { ProductsRoutingModule } from './products-routing.module';
   ],
   exports: [
     CatalogComponent,
+    CreateComponent,
   ]
 })
 export class ProductsModule { }

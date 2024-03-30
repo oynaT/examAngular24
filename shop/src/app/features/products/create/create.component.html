@@ -1,0 +1,59 @@
+<section id="createPage">
+  <form id='createForm' #createForm="ngForm" (ngSubmit)="onCreateHandler(createForm)">
+    <div>
+      <label for="name" class="">* Name</label>
+      <input ngModel #name="ngModel" name="name" id="name" autofocus class="" placeholder="Name" required />
+      <!-- pattern="^[a-zA-Z]+$"-->
+
+      <ng-container *ngIf="name.invalid && name.touched">
+        <div class="" *ngIf="name.errors?.['required']">Name is required.
+        </div>
+        <!-- <div class="" *ngIf="name.errors?.['pattern']">Name must be in format.</div> -->
+      </ng-container>
+    </div>
+
+    <div>
+      <label for="brand" class="">Brand</label>
+      <input ngModel #brand="ngModel" type="text" name="brand" id="brand" class="" placeholder="Sony, Apple, Xiaomi"
+        required />
+
+      <ng-container *ngIf="brand.invalid && brand.touched">
+        <div class="" *ngIf="brand.errors?.['required']">Brand is required. </div>
+      </ng-container>
+    </div>
+
+    <div>
+      <label for="image" class="">Image</label>
+      <input ngModel #image="ngModel" type="text" name="image" id="image" class="" placeholder="Enter Image URL"
+        required>
+
+      <ng-container *ngIf="image.invalid && image.touched">
+        <div class="" *ngIf="image.errors?.['required']">Image is required.</div>
+      </ng-container>
+    </div>
+
+    <div>
+      <label for="price" class="">Price</label>
+      <input ngModel #price="ngModel" type="text" name="price" id="price" class=" " placeholder="Price" required />
+
+      <ng-container *ngIf="price.invalid && price.touched">
+        <div class="" *ngIf="price.errors?.['required']">Price is required.</div>
+      </ng-container>
+    </div>
+
+    <div>
+      <label for="description" class="">Description</label>
+      <input ngModel #description="ngModel" type="text" name="description" id="description" class=" "
+        placeholder="Description" required />
+
+      <ng-container *ngIf="description.invalid && description.touched">
+        <div class="" *ngIf="description.errors?.['required']">Price is required.</div>
+      </ng-container>
+    </div>
+
+    <button [disabled]="createForm.invalid" type="submit" class="">Add Product</button>
+
+    <div class="" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  </form>
+</section>

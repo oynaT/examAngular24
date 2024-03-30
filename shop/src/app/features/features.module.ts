@@ -11,10 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 @NgModule({
   declarations: [
     HomeComponent,
-    PageNotFoundComponent,    
+    PageNotFoundComponent,
+   
     //AuthComponent,
     //ProductsModule
   ],
