@@ -1,0 +1,13 @@
+{
+	"name": "shop",
+	"version": "1.0.0",
+	"description": "Shop SPA with Angular",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {},
+	"devDependencies": {}
+}

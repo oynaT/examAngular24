@@ -1,0 +1,93 @@
+<section id="registerPage">
+
+    <form id='registerForm'  #registerForm="ngForm" (ngSubmit)="onRegisterHandler(registerForm)">
+        <div>
+            <label for="email">Email:</label>
+            <input
+              ngModel
+              #email="ngModel"
+              name="email"
+              id="email"
+              autofocus
+              class=""
+              placeholder="username@domain.tld"
+              required
+              pattern="^[a-zA-Z0-9_]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$"/>
+
+            <ng-container *ngIf="email.invalid && email.touched">
+              <div class=""
+                *ngIf="email.errors?.['required']">Email is required
+              </div>
+              <div class=""
+                *ngIf="email.errors?.['pattern']">Email must be in format username@domain.tld 
+              </div>
+            </ng-container>
+          </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input
+              ngModel
+              #password="ngModel"
+              type="password"
+              name="password"
+              id="password"
+              class=""
+              placeholder="******"
+              required
+              minlength="6"/>
+
+            <ng-container *ngIf="password.invalid && password.touched">
+              <div class=""
+                *ngIf="password.errors?.['required']">Password is required.
+              </div>
+              <div class=" "
+                *ngIf="password.errors?.['minlength']">Password must be at least {{password.errors?.['minlength']?.['requiredLength']}} characters long.
+              </div>
+            </ng-container>
+          </div>
+
+          <div>
+            <label for="repassword">Confirm Password:</label>
+            <input
+              ngModel
+              #repassword="ngModel"
+              type="password"
+              name="repassword"
+              id="repassword"
+              class=" "
+              placeholder="******"
+              required
+              minlength="6"/>
+            
+            <!-- CONFIRM PASSWORD ERRORS -->
+            <ng-container *ngIf="!password.invalid || (repassword.invalid && repassword.touched)">
+              <div class=" "
+                *ngIf="repassword.errors?.['required']">Confirm password is required.
+              </div>
+              <div class=" "
+                *ngIf="repassword.errors?.['minlength']">Confirm password must be at least {{repassword.errors?.['minlength']?.['requiredLength']}} characters long.
+              </div>
+              <div class=" "
+                *ngIf="password.value != repassword.value">Passwords don't match!
+              </div>
+            </ng-container>
+          </div>
+
+        <button
+          [disabled]="registerForm.invalid || password.value != repassword.value"
+          type="submit"
+          class="">
+          Sign up
+        </button>
+
+        <div class=""
+        *ngIf="errorMessage">{{ errorMessage }}
+      </div>
+
+      <p class="">Already have an account?
+        <a routerLink="/auth/login"
+          class="">Sign in</a>
+      </p>
+    </form>
+</section>

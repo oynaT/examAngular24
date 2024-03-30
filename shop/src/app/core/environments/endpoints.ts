@@ -1,0 +1,15 @@
+export const ENDPOINTS = {
+  register: 'users/register',
+  login: 'users/login',
+  logout: 'users/logout',
+  catalog: 'data/products?distinct=name&sortBy=age',
+  createProduct: 'data/products',
+	likeProduct: 'data/likes',
+  details: (productId: string) => `data/players/${productId}`,
+  edit: (productId: string) => `data/players/${productId}`,
+  delete: (productId: string) => `data/players/${productId}`,
+  canLike: (productId: string, userId: string) => `data/likes?where=playerId%3D%22${productId}%22%20and%20_ownerId%3D%22${userId}%22&count`,
+	likesForProducts: (productId: string) => `data/likes?where=playerId%3D%22${productId}%22&distinct=_ownerId&count`,
+  search: (query: string) => `data/players?where=name%20LIKE%20%22${query}%22&sortBy=age`,
+	getMyProducts: (userId: string) => `data/players?where=_ownerId%3D%22${userId}%22&sortBy=age`,
+};

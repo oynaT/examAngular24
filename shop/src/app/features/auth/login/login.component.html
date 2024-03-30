@@ -1,0 +1,52 @@
+<section id="loginPage">
+    <form id='loginForm' #loginForm="ngForm" (ngSubmit)="onLoginHandler(loginForm)">
+        <div>
+            <label for="email">Email:</label>
+            <input ngModel #email="ngModel" name="email" id="email" autofocus
+                class=""
+                placeholder="username@domain.tld" required pattern="^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$" />
+
+            <ng-container *ngIf="email.invalid && email.touched">
+                <div class="" *ngIf="email.errors?.['required']">
+                    Email is required!
+                </div>
+                <div class="" *ngIf="email.errors?.['pattern']">
+                    Email must be in format username@domain.tld
+                </div>
+            </ng-container>
+        </div>
+
+        <div>
+            <label for="password">Password:</label>
+            <input ngModel #password="ngModel" type="password" name="password" id="password"
+                class=""
+                placeholder="******" required minlength="6" />
+
+            <ng-container *ngIf="password.invalid && password.touched">
+                <div class=" "
+                    *ngIf="password.errors?.['required']">Password is required.
+                </div>
+                <div class=" "
+                    *ngIf="password.errors?.['minlength']">Password must be at least {{
+                    password.errors?.['minlength']?.['requiredLength'] }} characters long.
+                </div>
+            </ng-container>
+        </div>
+    
+        <button [disabled]="loginForm.invalid" 
+            type="submit"
+            class="login register">Login
+        </button>
+
+        <div class=" " *ngIf="errorMessage">{{
+            errorMessage }} 
+        </div>
+
+    </form>
+ 
+    <p class="text-center">
+        Don't have an account yet?
+        <a routerLink="/auth/register">Register</a>
+    </p>
+
+</section>
