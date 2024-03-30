@@ -2,8 +2,8 @@ export interface IProduct {
   _id: string;
   name: string;
   image: string;
-  age: string;
-  position: string;
-  club: string;
+  price: string;
+  brand: string;
+  description: string;
   _ownerId: string;
 }

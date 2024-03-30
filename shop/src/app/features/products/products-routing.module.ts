@@ -14,8 +14,8 @@ const routes: Routes = [
   { path: '', pathMatch: 'full' , component: CatalogComponent },
   // { path: 'search', component: SearchComponent },
   // { path: 'add', canActivate: [isLoggedGuard], component: CreateComponent },
-  // { path: 'details/:playerId', component: DetailsComponent },
-  // { path: 'edit/:playerId', canActivate: [isLoggedGuard], component: EditComponent },
+  // { path: 'details/:productId', component: DetailsComponent },
+  // { path: 'edit/:productId', canActivate: [isLoggedGuard], component: EditComponent },
 ];
 
 @NgModule({

@@ -1,1 +1,18 @@
-<p>catalog works!</p>
+<section id="viewCatalog" class="background-img">
+    <div class="added-item">
+        <ng-container *ngIf="products">
+            <ng-container *ngIf="products.length > 0; else noProducts">
+                <ng-container *ngFor="let product of products">
+                
+                    <app-product [product]="product"></app-product>
+
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+    <ng-template #noProducts>
+        <h1 class=" ">
+            No added Products yet!.
+        </h1>
+    </ng-template>
+</section>

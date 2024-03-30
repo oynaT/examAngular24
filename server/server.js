@@ -1709,22 +1709,41 @@
         products: {
             "e797fa57-bf0a-4749-8028-72dba715e5f8": {
                 _id: "e797fa57-bf0a-4749-8028-72dba715e5f8",
-                name: "Kylian Mbappe",
-                image: "assets/mbappe.jpg",
-                age: 24,
-                club: "Paris Saint-Germain",
-                position: "Forward",
+                name: "Redmi watch 3 - Smart watch",
+                image: "assets/tech-device-with-nature-background.jpg",
+                price: 90,
+                brand: "Xiaomi",
+                description: "Redmi Watch 3 supports more than 120 workout modes, including outdoor running, cycling, hiking and pool swimming.",
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
             },
             "e232fa57-az0a-4781-9328-72d232gl5e5f": {
                 _id: "e232fa57-az0a-4781-9328-72d232gl5e5f",
-                name: "Erling Haaland",
-                image: "assets/haaland.jpg",
-                age: 22,
-                club: "Manchester City",
-                position: "Forward",
+                name: "Airpods Pro 2 - Earphones",
+                image: "assets/earphones-with-case-surrounded-by-nature-scene.jpg",
+                price: 550,
+                brand: "Apple",
+                description: "The H2-powered AirPods Pro now feature Adaptive Audio, 2 automatically prioritizing sounds that need your attention as you move through the world.",
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
-            }           
+            },
+            "q134mu57-ap0a-mb81-a828-lh063kzs4e9h": {
+                _id: "q134mu57-ap0a-mb81-a828-lh063kzs4e9h",
+                name: "Mi Band 9 - Smart Band",
+                image: "assets/smartwatch-screen-digital-device.jpg",
+                price: 83,
+                brand: "Xiaomi",
+                description: "It comes with a 1.6-inch AMOLED screen, making it easy to read and use.",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a"
+            },
+            "y444db23-zaza-gaga-9aha-lk158k89cjbv9": {
+                _id: "y444db23-zaza-gaga-9aha-lk158k89cjbv9",
+                name: "MacBook Pro",
+                image: "assets/tech-device-with-nature-background (2).jpg",
+                price: 1900,
+                brand: "Apple",
+                description: "MacBook is a brand of Mac notebook computers designed and marketed by Apple that use Apple's macOS operation system.",
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a"
+            }
+                       
         }
     };
     var rules$1 = {
