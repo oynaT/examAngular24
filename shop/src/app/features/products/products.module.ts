@@ -7,12 +7,14 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { ProductsRoutingModule } from './products-routing.module';
 import { CreateComponent } from './create/create.component';
 import { DetailsComponent } from './details/details.component';
+import { EditComponent } from './edit/edit.component';
 
 @NgModule({
   declarations: [
     CatalogComponent,
     CreateComponent,
     DetailsComponent,
+    EditComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +27,7 @@ import { DetailsComponent } from './details/details.component';
   exports: [
     CatalogComponent,
     CreateComponent,
+    EditComponent,
   ]
 })
 export class ProductsModule { }

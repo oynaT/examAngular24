@@ -48,5 +48,9 @@ export class ProductService {
     return this.http.get<number>(url);
   }
 
+  editProduct(productId: string, productData: IProduct): Observable<IProduct> {
+    const url = CONSTANTS.host + ENDPOINTS.edit(productId);
+    return this.http.put<IProduct>(url, productData);
+  }
 
 }
