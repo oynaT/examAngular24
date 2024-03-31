@@ -1,7 +1,7 @@
 <section id="editPage">
     <form id='editForm' *ngIf="product" #editForm="ngForm" (ngSubmit)="onEditHandler(editForm)">
         <div>
-            <label for="name">* Name</label>
+            <label for="name">Name</label>
             <input ngModel #name="ngModel" name="name" [(ngModel)]="product.name" id="name" autofocus placeholder="Name"
                 required />
             <!-- pattern="^[a-zA-Z]+$"-->
