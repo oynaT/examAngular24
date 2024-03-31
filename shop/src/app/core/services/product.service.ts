@@ -53,4 +53,9 @@ export class ProductService {
     return this.http.put<IProduct>(url, productData);
   }
 
+  getMyProducts(userId: string): Observable<IProduct[]> {
+    const url = CONSTANTS.host + ENDPOINTS.getMyProducts(userId);
+    return this.http.get<IProduct[]>(url);
+  }
+
 }

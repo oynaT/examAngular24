@@ -41,7 +41,7 @@
               <div class=""
                 *ngIf="password.errors?.['required']">Password is required.
               </div>
-              <div class=" "
+              <div 
                 *ngIf="password.errors?.['minlength']">Password must be at least {{password.errors?.['minlength']?.['requiredLength']}} characters long.
               </div>
             </ng-container>
@@ -55,20 +55,20 @@
               type="password"
               name="repassword"
               id="repassword"
-              class=" "
+              
               placeholder="******"
               required
               minlength="6"/>
             
             <!-- CONFIRM PASSWORD ERRORS -->
             <ng-container *ngIf="!password.invalid || (repassword.invalid && repassword.touched)">
-              <div class=" "
+              <div 
                 *ngIf="repassword.errors?.['required']">Confirm password is required.
               </div>
-              <div class=" "
+              <div 
                 *ngIf="repassword.errors?.['minlength']">Confirm password must be at least {{repassword.errors?.['minlength']?.['requiredLength']}} characters long.
               </div>
-              <div class=" "
+              <div 
                 *ngIf="password.value != repassword.value">Passwords don't match!
               </div>
             </ng-container>
@@ -77,13 +77,11 @@
         <button
           [disabled]="registerForm.invalid || password.value != repassword.value"
           type="submit"
-          class="">
+          class="button form-btn">
           Sign up
         </button>
 
-        <div class=""
-        *ngIf="errorMessage">{{ errorMessage }}
-      </div>
+        <div class="" *ngIf="errorMessage">{{ errorMessage }} </div>
 
       <p class="">Already have an account?
         <a routerLink="/auth/login"

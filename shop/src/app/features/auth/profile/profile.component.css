@@ -1,0 +1,64 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+#viewCatalog{
+    margin-bottom: 5%;
+    margin-top: 3%;
+}
+
+.added-item-in-shop {
+    color: black;
+    cursor: pointer;
+    width: 500px;
+    border: 2px solid white;
+    text-align: center;
+    /* background: rgba(0, 0, 0, 0.703); */
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.picture-added-item {
+    width: 300px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.picture-added-item:hover {
+    cursor: pointer;
+    /* transform: scale(1.1); */
+}
+
+.added-item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+.guest {
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+    color: white;
+    background: rgba(0, 0, 0, 0.703);
+    padding: 40px;
+    width: 30%;
+    font-size: 30px;
+    border: 2px solid white;
+}

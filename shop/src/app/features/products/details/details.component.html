@@ -1,5 +1,5 @@
+<h1 style="text-align: center;">Details</h1>
 <section id="detailsPage">
-
     <div *ngIf="errorMessage" class="">
         {{ errorMessage }}
     </div>
@@ -12,18 +12,18 @@
 
         <div class="info">
             <h3>Brand: {{ product.brand }}</h3>
-            <h2>Price: {{ product.price }}$</h2>
+            <p><b>Price: {{ product.price }}$</b></p>
             <p>Description: {{ product.description }}</p>
         </div>
 
         <ng-container *ngIf="isLogged">
             <div class="buttons">
-                
+
                 <ng-container *ngIf="isOwner">
                     <a [routerLink]="['/products', 'edit', product._id]" class="edit-btn">Edit</a>
                     <a (click)="deleteProduct(product._id)" class="delete-btn">Delete</a>
                 </ng-container>
-               
+
                 <ng-container *ngIf="!isOwner && isLogged">
                     <div *ngIf="(canOrder$ | async) == 0">
                         <a href="javascript:void(0)" (click)="orderProduct(product._id)" class="buy-btn">Buy</a>

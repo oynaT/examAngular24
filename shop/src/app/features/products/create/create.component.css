@@ -6,6 +6,7 @@
   
   #createForm {
     padding-top: 1%;
+    padding-bottom: 1%;
     display: inline-block;
     margin-top: 2%;
     margin-bottom: 4%;
@@ -45,7 +46,21 @@
   input {
     display: block;
     margin: 10px auto;
-    min-width: 330px;
+     width: 80%;
     border: 2px solid lightsteelblue;
     padding: 15px;
+}
+
+.error-msg {
+  color: rgb(244, 83, 83);
+}
+
+button {
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+button:disabled {
+  padding: 10px 30px;
+  border-radius: 10px;
 }

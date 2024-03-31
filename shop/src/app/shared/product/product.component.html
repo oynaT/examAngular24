@@ -1,7 +1,7 @@
 <div class="added-item-in-shop">
     <img src={{product.image}} class="picture-added-item" alt="{{ product.name }}">
     <h3>{{product.name}}</h3>
-    <span>Price: {{product.price}} </span>
+    <span><b>Price: {{product.price}}$ </b></span>
     <p>Description: {{product.description}} </p>
-    <a [routerLink]="['/products', 'details', product._id]"><span>More Info</span></a>
+    <a [routerLink]="['/products', 'details', product._id]" class="button product-btn">More Info</a>
 </div>

@@ -1,0 +1,39 @@
+section#homePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh; 
+    text-align: center;
+    color: white;
+}
+h1 {
+    font-size: 60px;
+}
+
+a.button {
+    text-decoration: none;
+    color: white;
+}
+
+.button {
+    margin-top: 2%;
+    border: 2px solid white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    display: inline-block;
+}
+.product-btn:hover {
+    color: white;
+    background-color: #aaa9a9;
+}
+
+.background-img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('src/assets/bg-fon.png');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: center;
+    box-shadow: rgba(0, 0, 0, .3) 0 0 0 1000000px inset;
+}
