@@ -12,20 +12,20 @@ export class AddHeaderInterceptor implements HttpInterceptor {
   intercept( request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
     const accessToken = this.authService.getUserData()?.accessToken;
     if (accessToken) { //проверка дали токенът е наличен. ако е, той се добавя към хедъра на заявката request.clone().
-      request = request.clone({
+      request = request.clone({ //клонира версията на request
         setHeaders: {
           'X-Authorization': accessToken,
         }
       });
     }
-
+    console.log(request);
     request = request.clone({ //Независимо дали има токен или не, се добавя и хедър за типа на съдържанието content-type:app/json.
       setHeaders: {
         'Content-Type': 'application/json',
       },
     });
 
-    return next.handle(request); //променената заявка се предава на следващия интерцептор 
+    return next.handle(request); //променената заявка се предава на (angular) следващия интерцептор 
   }
 }
 
