@@ -55,9 +55,7 @@
 
         <button [disabled]="editForm.invalid" type="submit" class="edit">Edit</button>
 
-        <div class="" *ngIf="errorMessage">{{
-            errorMessage }} <i class="fa-solid fa-xmark"></i>
-        </div>
+        <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }} </div>
 
     </form>
 </section>

@@ -54,7 +54,7 @@
 
     <button [disabled]="createForm.invalid" type="submit">Add Product</button>
 
-    <div class="error-msg" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }}</div>
 
   </form>
 </section>

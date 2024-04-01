@@ -1,0 +1,33 @@
+<section class="search">
+    <h1>Search</h1>
+
+    <form #searchForm="ngForm" (submit)="onSearchHandler(searchForm)" class="search-form">
+        <div class="">
+            <input ngModel #search="ngModel" type="search" name="search" class="search-name" placeholder="Search" />
+
+            <button type="submit" class="btn-search">Search</button>
+        </div>
+    </form>
+
+    <section>
+        <div style="color: red; text-align: center; margin-top: 1%;" *ngIf="errorMessage"> {{ errorMessage }} </div>
+
+        <div class="search-result">
+            <div class="search-list">
+                <ng-container *ngIf="products">
+                    <ng-container *ngIf="products.length > 0; else noProducts">
+                        <ng-container *ngFor="let product of products">
+
+                            <app-product [product]="product"></app-product>
+
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
+
+        <ng-template #noProducts>
+            <h1>No match was found!</h1>
+        </ng-template>
+    </section>
+</section>

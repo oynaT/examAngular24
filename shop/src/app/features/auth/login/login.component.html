@@ -1,4 +1,5 @@
 <section id="loginPage">
+    <h1>Login</h1>
     <form id='loginForm' #loginForm="ngForm" (ngSubmit)="onLoginHandler(loginForm)">
         <div>
             <label for="email">Email:</label>
@@ -31,7 +32,7 @@
         <button [disabled]="loginForm.invalid" type="submit" class="button form-btn">Login
         </button>
 
-        <div class=" " *ngIf="errorMessage">{{
+        <div style="color: red;" *ngIf="errorMessage">{{
             errorMessage }}
         </div>
 

@@ -58,4 +58,9 @@ export class ProductService {
     return this.http.get<IProduct[]>(url);
   }
 
+  search(search: string): Observable<IProduct[]> {
+    const url = CONSTANTS.host + ENDPOINTS.search(search);
+    return this.http.get<IProduct[]>(url);
+  }
+
 }

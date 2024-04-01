@@ -1,5 +1,5 @@
 <section id="registerPage">
-
+  <h1>Register</h1>
     <form id='registerForm'  #registerForm="ngForm" (ngSubmit)="onRegisterHandler(registerForm)">
         <div>
             <label for="email">Email:</label>
@@ -81,7 +81,7 @@
           Sign up
         </button>
 
-        <div class="" *ngIf="errorMessage">{{ errorMessage }} </div>
+        <div style="color: red;" *ngIf="errorMessage">{{ errorMessage }} </div>
 
       <p class="">Already have an account?
         <a routerLink="/auth/login"
