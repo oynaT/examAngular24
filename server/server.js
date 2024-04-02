@@ -1742,8 +1742,16 @@
                 brand: "Apple",
                 description: "MacBook is a brand of Mac notebook computers designed and marketed by Apple that use Apple's macOS operation system.",
                 _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a"
-            }
-                       
+            },
+            "p555db99-lqlq-1010-omoz-hg158k89c90zz": {
+                _id: "p555db99-lqlq-1010-omoz-hg158k89c90zz",
+                name: "Wireless speaker",
+                image: "assets/wireless-white-smart-speaker-digital-device.jpg",
+                price: 99,
+                brand: "Apple",
+                description: "Apple wireless speaker. The unique acoustic waveguide directs sound out the bottom of the speaker, creating a 360‑degree audio field for consistent sound no matter where you are in the room.",
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8"
+            },                      
         }
     };
     var rules$1 = {

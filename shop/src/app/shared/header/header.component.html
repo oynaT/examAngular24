@@ -8,7 +8,7 @@
         <!-- LOGGED IN USERS -->
         <ng-container *ngIf="isLogged">
             <li><a routerLink="/products/add">Create Product</a></li>
-            <li><a routerLink="/auth/profile"> Welcome: {{ userEmail }}</a></li>
+            <li><a routerLink="/auth/profile">Profile: {{ userEmail }}</a></li>
             <li><a (click)="logout()">Logout</a></li>
         </ng-container>
 

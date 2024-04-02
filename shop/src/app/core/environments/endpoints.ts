@@ -13,4 +13,6 @@ export const ENDPOINTS = {
   ordersForProduct: (productId: string) => `data/orders?where=productId%3D%22${productId}%22&distinct=_ownerId&count`,
   getMyProducts: (userId: string) => `data/products?where=_ownerId%3D%22${userId}%22&sortBy=name`,
   search: (query: string) => `data/products?where=name%20LIKE%20%22${query}%22&sortBy=name`,
+
+  //${baseUrl}?where=title%20LIKE%20%22${text}%22%20OR%20category%20LIKE%20%22${text}%22`);
 };
