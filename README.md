@@ -12,6 +12,7 @@ The application is created with SoftUni practice server for backend and Angular 
 - Access profile with ordered products
 - Edit or delete own products
 - Order other users products
+- Search
 
 ### To install and run locally, follow these steps:
 1. Clone the repository to your local machine
